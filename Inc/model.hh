@@ -21,7 +21,10 @@ private:
 	const std::unique_ptr<std::vector<std::vector<Pixel>>> repr;
 };
 
+// for reference see:
+// https://spaceinvaders.fandom.com/wiki/Category:Space_Invaders_Characters
 
+// Squid - small invader, 8x8
 constexpr std::vector<std::vector<Pixel>> squid_texture = {
         {0, 0, 0, 1, 1, 0, 0, 0},
         {0, 0, 1, 1, 1, 1, 0, 0},
@@ -33,6 +36,7 @@ constexpr std::vector<std::vector<Pixel>> squid_texture = {
         {1, 0, 1, 0, 0, 1, 0, 1}
 };
 
+// Carb - medium invader, 11x8
 constexpr std::vector<std::vector<Pixel>> crab_texture = {
         {0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0},
         {0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0},
@@ -44,6 +48,7 @@ constexpr std::vector<std::vector<Pixel>> crab_texture = {
         {0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0},
 };
 
+// Octopus - large invader, 12x8
 constexpr std::vector<std::vector<Pixel>> octopus_texture = {
         {0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0},
         {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
