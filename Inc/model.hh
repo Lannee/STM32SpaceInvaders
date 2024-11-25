@@ -20,3 +20,15 @@ private:
 	const size_t width;
 	const std::unique_ptr<std::vector<std::vector<Pixel>>> repr;
 };
+
+
+constexpr std::vector<std::vector<Pixel>> squid_texture = {
+        {0, 0, 0, 1, 1, 0, 0, 0},
+        {0, 0, 1, 1, 1, 1, 0, 0},
+        {0, 1, 1, 1, 1, 1, 1, 0},
+        {1, 1, 0, 1, 1, 0, 1, 1},
+        {1, 1, 1, 1, 1, 1, 1, 1},
+        {0, 0, 1, 0, 0, 1, 0, 0},
+        {0, 1, 0, 1, 1, 0, 1, 0},
+        {1, 0, 1, 0, 0, 1, 0, 1}
+};
