@@ -71,8 +71,14 @@ const std::vector<std::vector<Pixel>> spaceship_texture = {
         {1, 1, 1, 0, 1, 1, 1},
 };
 
+const std::vector<std::vector<Pixel>> bullet_texture = {
+        {1},
+        {1}
+};
+
 const Model squid_model(8, 8, std::make_unique<std::vector<std::vector<Pixel>>>(squid_texture));
 const Model crab_model(8, 11, std::make_unique<std::vector<std::vector<Pixel>>>(crab_texture));
 const Model octopus_model(8, 12, std::make_unique<std::vector<std::vector<Pixel>>>(octopus_texture));
 
 const Model spaceship_model(7, 7, std::make_unique<std::vector<std::vector<Pixel>>>(spaceship_texture));
+const Model bullet_model(2, 1, std::make_unique<std::vector<std::vector<Pixel>>>(bullet_texture));
