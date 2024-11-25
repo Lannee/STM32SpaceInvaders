@@ -60,3 +60,7 @@ const std::vector<std::vector<Pixel>> octopus_texture = {
         {0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0},
         {1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1},
 };
+
+const Model squid_model(8, 8, std::make_unique<std::vector<std::vector<Pixel>>>(squid_texture));
+const Model crab_model(8, 11, std::make_unique<std::vector<std::vector<Pixel>>>(crab_texture));
+const Model octopus_model(8, 12, std::make_unique<std::vector<std::vector<Pixel>>>(octopus_texture));
