@@ -13,6 +13,7 @@ typedef bool Pixel;
  * Represents model shown on screen a.k.a. texture
  */
 class Model {
+public:
 	Model(size_t height, size_t width, std::unique_ptr<std::vector<std::vector<Pixel>>> repr)
 		: height(height), width(width), repr(std::move(repr)) {}
 private:
@@ -25,7 +26,7 @@ private:
 // https://spaceinvaders.fandom.com/wiki/Category:Space_Invaders_Characters
 
 // Squid - small invader, 8x8
-constexpr std::vector<std::vector<Pixel>> squid_texture = {
+const std::vector<std::vector<Pixel>> squid_texture = {
         {0, 0, 0, 1, 1, 0, 0, 0},
         {0, 0, 1, 1, 1, 1, 0, 0},
         {0, 1, 1, 1, 1, 1, 1, 0},
@@ -37,7 +38,7 @@ constexpr std::vector<std::vector<Pixel>> squid_texture = {
 };
 
 // Carb - medium invader, 11x8
-constexpr std::vector<std::vector<Pixel>> crab_texture = {
+const std::vector<std::vector<Pixel>> crab_texture = {
         {0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0},
         {0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0},
         {0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
@@ -49,7 +50,7 @@ constexpr std::vector<std::vector<Pixel>> crab_texture = {
 };
 
 // Octopus - large invader, 12x8
-constexpr std::vector<std::vector<Pixel>> octopus_texture = {
+const std::vector<std::vector<Pixel>> octopus_texture = {
         {0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0},
         {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
