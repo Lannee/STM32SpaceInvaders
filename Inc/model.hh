@@ -19,4 +19,8 @@ private:
 	const size_t height;
 	const size_t width;
 	const std::unique_ptr<std::vector<std::vector<Pixel>>> repr;
+
+public:
+	size_t height() { return height; }
+	size_t width () { return width;  }
 };
