@@ -23,8 +23,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "Model.hh"
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
