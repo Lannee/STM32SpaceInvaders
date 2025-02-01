@@ -13,6 +13,7 @@ typedef bool Pixel;
  * Represents model shown on screen a.k.a. texture
  */
 class Model {
+public:
 	Model(size_t height, size_t width, std::unique_ptr<std::vector<std::vector<Pixel>>> repr)
 		: height(height), width(width), repr(std::move(repr)) {}
 private:
@@ -24,3 +25,64 @@ public:
 	size_t height() { return height; }
 	size_t width () { return width;  }
 };
+
+// for reference see:
+// https://spaceinvaders.fandom.com/wiki/Category:Space_Invaders_Characters
+
+// Squid - small invader, 8x8
+const std::vector<std::vector<Pixel>> squid_texture = {
+        {0, 0, 0, 1, 1, 0, 0, 0},
+        {0, 0, 1, 1, 1, 1, 0, 0},
+        {0, 1, 1, 1, 1, 1, 1, 0},
+        {1, 1, 0, 1, 1, 0, 1, 1},
+        {1, 1, 1, 1, 1, 1, 1, 1},
+        {0, 0, 1, 0, 0, 1, 0, 0},
+        {0, 1, 0, 1, 1, 0, 1, 0},
+        {1, 0, 1, 0, 0, 1, 0, 1}
+};
+
+// Carb - medium invader, 11x8
+const std::vector<std::vector<Pixel>> crab_texture = {
+        {0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0},
+        {0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+        {0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0},
+        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+        {1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+        {1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1},
+        {0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0},
+};
+
+// Octopus - large invader, 12x8
+const std::vector<std::vector<Pixel>> octopus_texture = {
+        {0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0},
+        {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+        {1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1},
+        {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+        {0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0},
+        {0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 0},
+        {1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1},
+};
+
+const std::vector<std::vector<Pixel>> spaceship_texture = {
+        {0, 0, 1, 1, 1, 0, 0},
+        {0, 0, 1, 0, 1, 0, 0},
+        {0, 0, 1, 0, 1, 0, 0},
+        {0, 0, 1, 0, 1, 0, 0},
+        {1, 1, 1, 1, 1, 1, 1},
+        {1, 0, 1, 0, 1, 0, 1},
+        {1, 1, 1, 0, 1, 1, 1},
+};
+
+const std::vector<std::vector<Pixel>> bullet_texture = {
+        {1},
+        {1}
+};
+
+const Model squid_model(8, 8, std::make_unique<std::vector<std::vector<Pixel>>>(squid_texture));
+const Model crab_model(8, 11, std::make_unique<std::vector<std::vector<Pixel>>>(crab_texture));
+const Model octopus_model(8, 12, std::make_unique<std::vector<std::vector<Pixel>>>(octopus_texture));
+
+const Model spaceship_model(7, 7, std::make_unique<std::vector<std::vector<Pixel>>>(spaceship_texture));
+const Model bullet_model(2, 1, std::make_unique<std::vector<std::vector<Pixel>>>(bullet_texture));
